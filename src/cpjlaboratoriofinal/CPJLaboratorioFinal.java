@@ -22,7 +22,20 @@ public class CPJLaboratorioFinal {
             System.out.println("3.- Listar Peliculas");
             System.out.println("4.- Buscar Pelicula");
             System.out.println("0.- Salir");
+            try{
+                opcion = scanner.nextInt();
+            }catch(Exception ex){
+                ex.printStackTrace(System.out);
+                System.out.println("Seleccione un valor numerico por favor");
+            }
             
+            switch (opcion) {
+                case 1:
+                    
+                    break;
+                default:
+                    throw new AssertionError();
+            }
         }while(opcion!=0);
         
     }
