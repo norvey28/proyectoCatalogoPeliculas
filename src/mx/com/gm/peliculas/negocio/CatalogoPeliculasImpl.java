@@ -21,10 +21,12 @@ public class CatalogoPeliculasImpl implements CatalogoPeliculas {
 
     @Override
     public void agregarPelicula(String nombrePelicula) {
+        Pelicula pelicula = new Pelicula(nombrePelicula);
+        boolean anexar = false;
         try {
-            Pelicula pelicula = new Pelicula(nombrePelicula);
-            boolean anexar = false;
             anexar = datos.existe(NOMBRE_RECURSO);
+            datos.escribir(pelicula, NOMBRE_RECURSO, anexar);
+
         } catch (AccesoDatosEx ex) {
             System.out.println("Error de acceso a Datos");
             ex.printStackTrace();
