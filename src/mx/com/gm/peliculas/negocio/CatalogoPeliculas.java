@@ -8,7 +8,7 @@ public interface CatalogoPeliculas {
     
     String NOMBRE_RECURSO="Peliculas.txt";
     
-    void agregarPelicula(String nombrePelicula, String nombreArchivo);
+    void agregarPelicula(String nombrePelicula);
     
     void listarPeliculas(String nombreArchivo);
     
