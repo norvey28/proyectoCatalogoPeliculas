@@ -6,4 +6,19 @@ package mx.com.gm.peliculas.negocio;
  */
 public interface CatalogoPeliculas {
     
+    public static void agregarPelicula(String nombrePelicula, String nombreArchivo){
+        
+    }
+    
+    public static void listarPeliculas(String nombreArchivo){
+        
+    }
+    
+    public static void buscarPelicula(String nombreArchivo, String buscar){
+        
+    }
+    
+    public static void inicarArchivo(String nombreArchivo){
+        
+    }
 }
