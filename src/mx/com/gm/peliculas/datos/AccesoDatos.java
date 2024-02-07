@@ -3,6 +3,9 @@ package mx.com.gm.peliculas.datos;
 import java.util.ArrayList;
 import java.util.List;
 import mx.com.gm.peliculas.domain.Pelicula;
+import mx.com.gm.peliculas.excepciones.AccesoDatosEx;
+import mx.com.gm.peliculas.excepciones.EscrituraDatosEx;
+import mx.com.gm.peliculas.excepciones.LecturaDatosEx;
 
 /**
  *
@@ -10,28 +13,16 @@ import mx.com.gm.peliculas.domain.Pelicula;
  */
 public interface AccesoDatos {
 
-    public static boolean existe(String nombreArchivo){
-        return true;
-    }
+    boolean existe(String nombreArchivo) throws AccesoDatosEx;
     
-    public static List<Pelicula> listar(String nombre){
-        return new ArrayList();
-    }
+    List<Pelicula> listar(String nombre)throws LecturaDatosEx;
     
-    public static void escribir(Pelicula pelicula, String nombreArchivo,boolean anexar){
-            
-    }
+    void escribir(Pelicula pelicula, String nombreArchivo,boolean anexar) throws EscrituraDatosEx;
     
-    public static String buscar(String nombreArchivo, String buscar){
-        return "hola";
-    }
+    String buscar(String nombreArchivo, String buscar) throws LecturaDatosEx;
     
-    public static void crear(String nombreArchivo){
-        
-    }
+    void crear(String nombreArchivo) throws AccesoDatosEx;
     
-    public static void borrar(String nombreArchivo){
-        
-    }
+    void borrar(String nombreArchivo) throws AccesoDatosEx;
     
 }
