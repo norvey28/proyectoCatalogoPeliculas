@@ -10,9 +10,9 @@ public interface CatalogoPeliculas {
     
     void agregarPelicula(String nombrePelicula);
     
-    void listarPeliculas(String nombreArchivo);
+    void listarPeliculas();
     
-    void buscarPelicula(String nombreArchivo, String buscar);
+    void buscarPelicula(String buscar);
     
-    void inicarArchivo(String nombreArchivo);
+    void inicarCatalogoPeliculas();
 }

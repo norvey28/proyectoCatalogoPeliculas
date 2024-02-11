@@ -1,7 +1,5 @@
 package mx.com.gm.peliculas.negocio;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import mx.com.gm.peliculas.datos.AccesoDatos;
 import mx.com.gm.peliculas.datos.AccesoDatosImpl;
 import mx.com.gm.peliculas.domain.Pelicula;
@@ -35,7 +33,7 @@ public class CatalogoPeliculasImpl implements CatalogoPeliculas {
     }
 
     @Override
-    public void listarPeliculas(String nombreArchivo) {
+    public void listarPeliculas() {
         try {
             var peliculas = this.datos.listar(NOMBRE_RECURSO);
             for(var pelicula : peliculas){
@@ -48,7 +46,7 @@ public class CatalogoPeliculasImpl implements CatalogoPeliculas {
     }
 
     @Override
-    public void buscarPelicula(String nombreArchivo, String buscar) {
+    public void buscarPelicula(String buscar) {
         
         String resultado = null;
         try {
@@ -61,7 +59,7 @@ public class CatalogoPeliculasImpl implements CatalogoPeliculas {
     }
 
     @Override
-    public void inicarArchivo(String nombreArchivo) {
+    public void inicarCatalogoPeliculas() {
         try {
             if(datos.existe(NOMBRE_RECURSO)){
                 datos.borrar(NOMBRE_RECURSO);

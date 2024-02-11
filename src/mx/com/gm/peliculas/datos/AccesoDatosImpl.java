@@ -73,7 +73,7 @@ public class AccesoDatosImpl implements AccesoDatos {
             int indice = 1;
             while (linea != null) {
                 if (buscar != null && linea.equalsIgnoreCase(buscar)) {
-                    resultado = "Pelicula " + buscar + "encontrada en el indice " + indice;
+                    resultado = "Pelicula " + buscar + " encontrada en el indice " + indice;
                     break;
                 }
                 indice++;
